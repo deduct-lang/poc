@@ -11,14 +11,14 @@ class StateMachine:
     """理論を検証および進行し結論を出すステートマシン"""
 
     def __init__(
-        self, theory: Iterable[Effect], *, initial_state: list[Effect] | None = None
+        self, these: Iterable[Effect], *, initial_state: list[Effect] | None = None
     ) -> None:
-        self.theory = deque(theory)
+        self.these = deque(these)
 
         self.state = [] if initial_state is None else initial_state
 
     def proceed_once(self) -> None:
-        head = self.theory.popleft()
+        head = self.these.popleft()
 
         # 前提の検証と削除
         for premise in head.rule.premise:
@@ -48,7 +48,7 @@ class StateMachine:
             self.state.append(conclusion)
 
     def proceed(self) -> list[Effect]:
-        while self.theory:
+        while self.these:
             self.proceed_once()
 
         return self.state

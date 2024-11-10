@@ -20,13 +20,13 @@ give = Rule(
     (Effect(having, {having_s: give_y, having_o: give_o}),),
 )
 
-# 理論の記述
-theory = (
+# テーゼ
+these = (
     Effect(having, {having_s: takagi, having_o: cat}),
     Effect(give, {give_x: takagi, give_y: marisa, give_o: cat}),
 )
 
-# 理論の進行
-state_machine = StateMachine(theory)
+# テーゼの演繹進行
+state_machine = StateMachine(these)
 for effect in state_machine.proceed():
     print(effect)

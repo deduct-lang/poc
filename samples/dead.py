@@ -16,13 +16,13 @@ die = Rule(
     (),
 )
 
-# 理論の記述
-theory = (
+# テーゼ
+these = (
     Effect(s_is_human, {is_s: socrates}),
     Effect(die, {die_s: socrates}),
 )
 
-# 理論の進行
-state_machine = StateMachine(theory)
+# テーゼの演繹進行
+state_machine = StateMachine(these)
 for effect in state_machine.proceed():
     print(effect)
