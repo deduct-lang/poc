@@ -1,0 +1,13 @@
+@def {
+    have[S, O]
+    pass[X, Y, O] {
+        @unsafe {
+            @premise { have[X, O] }
+        }
+
+	    have[Y, O]
+    }
+}
+
+have[髙木, ファイル]
+pass[髙木, 猫, ファイル]
