@@ -11,7 +11,10 @@ class StateMachine:
     """理論を検証および進行し結論を出すステートマシン"""
 
     def __init__(
-        self, these: Iterable[Effect], *, initial_state: list[Effect] | None = None
+        self,
+        these: Iterable[Effect],
+        *,
+        initial_state: list[Effect] | None = None,
     ) -> None:
         self.these = deque(these)
 
