@@ -42,5 +42,6 @@ pydocstyle = { convention = "google" }
 
 [dependency-groups]
 dev = [
+    "mecab-python3>=1.0.10",
     "ruff>=0.7.3",
 ]
