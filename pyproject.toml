@@ -18,7 +18,6 @@ preview = true
 select = [
     "F", # 未使用のimportを警告するルール
     "D", # ドキュメントを記載するルール
-    "TCH", # 型ヒントに関するルール
     "TID251", # Banned APIのルール
     "LOG" # loggingの使い方についてのルール
 ]
